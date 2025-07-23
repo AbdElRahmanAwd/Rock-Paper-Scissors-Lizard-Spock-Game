@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.parent {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* score container */
+.box {
+  display: flex;
+  width: 40rem;
+  height: 8rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid white;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.score {
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(229, 25%, 31%);
+}
+
+.box .logo-two {
+  display: none;
+}
+
+/* end score container */
+
+/* winner container */
+.winner-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-winner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+}
+
+.game-winner .one::before {
+  content: "You picked";
+  color: white;
+  position: absolute;
+  top: 1rem;
+}
+
+.game-winner .two::before {
+  content: "Computer";
+  color: white;
+  position: absolute;
+  top: 1rem;
+}
+
+.announce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.game-winner .result {
+  font-size: 2rem;
+  color: white;
+}
+
+.announce button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* end winner container */
+
+/* rules container */
+.rules-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.game-rules {
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.rules {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+/* end rules container */
+
+/* switch container */
+.switch {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+/* end switch container */
+
+.game {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 385px;
+}
+/* game one */
+.game-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  background-image: url(./images/bg-triangle.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game-box .top {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.play {
+  display: grid;
+  place-items: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* end game one */
+
+/* game two */
+.game-two {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-image: url(./images/bg-pentagon.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game-two .play-two {
+  display: grid;
+  place-items: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.game-two .above {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 14rem;
+  gap: 2rem;
+}
+
+.game-two .bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.rock {
+  border: 10px solid red;
+}
+.paper {
+  border: 10px solid blue;
+  align-self: end;
+}
+.scissors {
+  border: 10px solid orange;
+}
+
+.lizard {
+  border: 10px solid green;
+}
+.spock {
+  border: 10px solid purple;
+  align-self: end;
+}
+
+/* end game two */

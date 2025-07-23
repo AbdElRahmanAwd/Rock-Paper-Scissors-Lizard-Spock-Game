@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="./style.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="container">
+        <div class="box">
+          <img class="logo-one" src="./images/logo.svg" alt="" />
+          <img class="logo-two" src="./images/logo-bonus.svg" alt="" />
+          <div class="score">
+            <p>Score</p>
+            <h1 id="score-board">0</h1>
+          </div>
+        </div>
+
+        <div class="game">
+          <!-- rock paper scissors -->
+          <div class="game-box">
+            <div class="top">
+              <button class="paper play">
+                <img src="./images/icon-paper.svg" alt="" />
+              </button>
+              <button class="scissors play">
+                <img src="./images/icon-scissors.svg" alt="" />
+              </button>
+            </div>
+            <button class="rock play">
+              <img src="./images/icon-rock.svg" alt="" />
+            </button>
+          </div>
+          <!-- rock paper scissors spock lizard  -->
+          <div class="game-two">
+            <div class="above">
+              <button class="spock play-two">
+                <img src="./images/icon-spock.svg" alt="" />
+              </button>
+              <button class="scissors play-two">
+                <img src="./images/icon-scissors.svg" alt="" />
+              </button>
+              <button class="paper play-two">
+                <img src="./images/icon-paper.svg" alt="" />
+              </button>
+            </div>
+            <div class="bottom">
+              <button class="lizard play-two">
+                <img src="./images/icon-lizard.svg" alt="" />
+              </button>
+              <button class="rock play-two">
+                <img src="./images/icon-rock.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- game winner -->
+          <div class="winner-container">
+            <div class="game-winner">
+              <div class="play one">
+                <img id="player" alt="" />
+              </div>
+              <div class="announce">
+                <p class="result"></p>
+                <button class="play-again">Play Again</button>
+              </div>
+              <div class="play two">
+                <img id="computer" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- rules -->
+          <div class="rules-container">
+            <div class="game-rules">
+              <img class="game-one-rules" src="./images/image-rules.svg" alt="" />
+              <img class="game-two-rules" src="./images/image-rules-bonus.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="rules">Rules</button>
+      <button class="switch">Switch</button>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
