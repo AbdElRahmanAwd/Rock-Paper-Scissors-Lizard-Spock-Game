@@ -15,6 +15,10 @@ export default function openRules() {
     let game_one = window.getComputedStyle(logo_one).display === "block";
     let game_two = window.getComputedStyle(logo_two).display === "block";
 
+    document.querySelector(".winner-container .announce").style.display =
+      "none";
+    document.querySelector(".winner-container .two").className = "play two";
+    document.querySelector(".winner-container #computer").src = "";
     document.querySelector(".winner-container").style.display = "none";
     if (game_one) {
       gameOne.style.display = "flex";

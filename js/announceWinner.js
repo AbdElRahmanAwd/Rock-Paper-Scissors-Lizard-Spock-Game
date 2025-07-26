@@ -32,9 +32,7 @@ const WIN_RULES = {
 
 export function checkWinner(player1Choice, player2Choice) {
   player1Icon.src = Icons[player1Choice];
-  player2Icon.src = Icons[player2Choice];
-  parentOne.className = `play one ${player1Choice}`;
-  parentTwo.className = `play two ${player2Choice}`;
+  parentOne.classList.add(player1Choice);
 
   game_one.style.display = "none";
   game_two.style.display = "none";
@@ -50,4 +48,12 @@ export function checkWinner(player1Choice, player2Choice) {
   }
 
   result.textContent = outcome;
+  setTimeout(() => {
+    parentTwo.classList.add(player2Choice);
+    player2Icon.src = Icons[player2Choice];
+    setTimeout(() => {
+      document.querySelector(".winner-container .announce").style.display =
+        "flex";
+    }, 300);
+  }, 1000);
 }

@@ -20,11 +20,9 @@ function alreadyChosen() {
 
   playButtons.forEach((button, index) => {
     setTimeout(() => {
-      button.style.outline = "1px solid black";
-      button.style.backgroundColor = "hsla(0, 0%, 62%, 1.00)";
+      button.style.scale = "102%";
       setTimeout(() => {
-        button.style.outline = "none";
-        button.style.backgroundColor = "white";
+        button.style.scale = "1";
         if (index === playButtons.length - 1) {
           setTimeout(checkWinner(player1Choice, player2Choice), 300);
           setTimeout(resetValues(), 300);
