@@ -29,13 +29,19 @@
 /* score container */
 .box {
   display: flex;
-  width: 75%;
+  width: 50%;
   height: 8rem;
   align-items: center;
   justify-content: space-between;
   border: 2px solid white;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+  }
 }
 
 .score {
@@ -62,11 +68,13 @@
 .game-winner {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 2rem;
   border-radius: 0.5rem;
   padding: 3rem 2rem;
+  transition: all 0.3s ease;
 }
 
 .game-winner .one::before {
@@ -89,6 +97,13 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+@media (max-width: 425px) {
+  .announce {
+    order: 3;
+    text-align: center;
+  }
 }
 
 .game-winner .result {
